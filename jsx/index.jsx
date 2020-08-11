@@ -57,8 +57,8 @@ class RouterApp extends React.Component {
       return (
         <Router>
           <Switch>
-            <Route path={"/game"} component={GamePage}/>
-            <Route exact path={"/"} component={HomePage}/>
+            <Route path={"/game"} render={<GamePage/>}/>
+            <Route exact path={"/"} render={<HomePage/>}/>
           </Switch>
         </Router>
       );
