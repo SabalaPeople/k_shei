@@ -1,22 +1,24 @@
-class Main extends React.Component{
-    
+class HomePage extends React.Component {
+
     constructor(props){
         super(props);
         this.state = {
             
         }
+        
     }
+
 
     
 
     render(){
-        return(
-            <div >
-                
-                ABCD
-
-            </div>
-        );
+       
+            return(
+                <div>
+                    AAGGFG
+                </div>
+            );
+        
     }
 
 }
@@ -29,6 +31,17 @@ class Main extends React.Component{
 
 
 
+class RouterApp extends Component {
+    render() {
+      return (
+        <BrowserRouter>
+          <Switch>
+            <Route exact path={"/"} component={HomePage}/>
+          </Switch>
+        </BrowserRouter>
+      );
+    }
+  }
 
 
 
@@ -37,4 +50,17 @@ class Main extends React.Component{
 
 
 
-ReactDOM.render(<Main/>, document.body);
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReactDOM.render(<RouterApp/>, document.body);
