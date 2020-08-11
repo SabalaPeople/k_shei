@@ -31,7 +31,7 @@ class HomePage extends React.Component {
 
 
 
-class RouterApp extends Component {
+class RouterApp extends React.Component {
     render() {
       return (
         <BrowserRouter>
