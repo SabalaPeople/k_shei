@@ -37,7 +37,7 @@ class RouterApp extends React.Component {
       return (
         <Router>
           <Switch>
-            <Route exact path={"/"} render={<HomePage/>}/>
+            <Route exact path={""} render={<HomePage/>}/>
           </Switch>
         </Router>
       );
