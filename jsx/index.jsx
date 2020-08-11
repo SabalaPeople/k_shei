@@ -26,37 +26,37 @@ var Intro = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_1.png'} alt=""/>
+            <img src={'img/k_shei_1.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_1.png'} alt=""/>
+            <img src={'img/k_shei_1.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
     </div>
     <div className={'k_shei_intro'} id="k_shei_intro">
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_1.png'} alt=""/>
+            <img src={'img/k_shei_1.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_2.png'} alt=""/>
+            <img src={'img/k_shei_2.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_3.png'} alt=""/>
+            <img src={'img/k_shei_3.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_4.png'} alt=""/>
+            <img src={'img/k_shei_4.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_5.png'} alt=""/>
+            <img src={'img/k_shei_5.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
-            <img src={'../img/k_shei_6.png'} alt=""/>
+            <img src={'img/k_shei_6.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
     </div>
@@ -146,7 +146,7 @@ class GamePage extends React.Component {
           return(
               <div>
                 
-                  AAGGFG
+                <img src={'img/k_shei_6.png'} alt=""/>
               </div>
           );
     
