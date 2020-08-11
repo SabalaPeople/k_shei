@@ -112,21 +112,25 @@ class HomePage extends React.Component {
     }
 
     render(){
-      if(!this.state.isRedirect){
-            return(
-                <div>
-                  {/* <Intro/>
-                  <Login onLoginSuccess={this.setIsRedirect}/> */}
-                  AAA
-                </div>
-            );
-      } else {
-        return (
-          <div>
-              <Redirect push to={"/game"}/>
-          </div>
+      // if(!this.state.isRedirect){
+      //       return(
+      //           <div>
+      //             <Intro/>
+      //             <Login onLoginSuccess={this.setIsRedirect}/>
+      //           </div>
+      //       );
+      // } else {
+      //   return (
+      //     <div>
+      //         <Redirect push to={"/game"}/>
+      //     </div>
+      // );
+      // }
+      return (
+        <div>AVCD <Link to={"/game"}></Link>
+
+        </div>
       );
-      }
     }
 
 }
