@@ -102,32 +102,16 @@ class HomePage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-          isRedirect: false
+          
         }
-        this.setIsRedirect = this.setIsRedirect.bind(this);
+    
     }
 
-    setIsRedirect(isRedirect){
-      this.setState({isRedirect: isRedirect});
-    }
+   
 
     render(){
-      // if(!this.state.isRedirect){
-      //       return(
-      //           <div>
-      //             <Intro/>
-      //             <Login onLoginSuccess={this.setIsRedirect}/>
-      //           </div>
-      //       );
-      // } else {
-      //   return (
-      //     <div>
-      //         <Redirect push to={"/game"}/>
-      //     </div>
-      // );
-      // }
       return (
-        <div>AVCD <Link to={"/game"}></Link>
+        <div>AVCD <Link to={"/game"}>ASDD</Link>
 
         </div>
       );
