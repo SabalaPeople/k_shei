@@ -1,4 +1,5 @@
-const Router = window.ReactRouterDOM.BrowserRouter;
+const BrowserRouter = window.ReactRouterDOM.BrowserRouter;
+const HashRouter = window.ReactRouterDOM.HashRouter;
 const Route =  window.ReactRouterDOM.Route;
 const Link =  window.ReactRouterDOM.Link;
 const Prompt =  window.ReactRouterDOM.Prompt;
@@ -158,12 +159,12 @@ class GamePage extends React.Component {
 class RouterApp extends React.Component {
     render() {
       return (
-        <Router basename={process.env.PUBLIC_URL}>
+        <HashRouter>
           <Switch>
             <Route path={"/game"} component={GamePage}/>
             <Route exact path={"/"} component={HomePage}/>
           </Switch>
-        </Router>
+        </HashRouter>
       );
     }
   }
