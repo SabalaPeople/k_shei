@@ -132,25 +132,155 @@ class HomePage extends React.Component {
 
 }
 
-class GamePage extends React.Component {
+class KSheiComponent extends React.Component{
 
-  constructor(props){
-      super(props);
-      this.state = {
-          
-      }
-  }
+    constructor(props){
+        super(props);
+        this.state = {
+            nowTime: 0,
+            startedTime: 0,
+            endTime: 0,
+            isGrabbed: false
+        }
+        this.countDown = this.countDown.bind(this);
+        this.grab = this.grab.bind(this);
+    }
 
-  render(){
-     
-          return(
-              <div>
+    async componentDidMount(){
+        let result = await Util.send(UriApi.GameApi.GetPetTime.Uri(), {data: {id: this.props.value.id}});
+        if(result){
+            let startedTime = result.data.startedTime;
+            let endTime = result.data.endTime;
+            let isGrabbed = result.data.isGrabbed;
+            this.setState({nowTime: new Date().getTime(), startedTime: startedTime, endTime: endTime, isGrabbed: isGrabbed});
+        }
+
+        this.countDown();
+    }
+
+    countDown(){
+        setInterval(() => {
+            this.setState({nowTime: new Date().getTime()});
+        }, 1000);
+    }
+
+    grab(){
+        this.setState({isGrabbed: true});
+        let modalObj = {};
+        modalObj.isShow = true;
+        modalObj.url = UriApi.GameApi.Grab.Uri();
+        this.props.openModal(modalObj);
+    }
+
+    render(){
+        let button;
+        /** button = <button className={GamePageCss.buying} onClick={this.grab}>搶購中</button>; */
+        if(this.state.nowTime - this.state.startedTime > 0 && this.state.nowTime - this.state.endTime < 0){
+            if(this.state.isGrabbed) button = <button className={GamePageCss.ending} disabled>已結束</button>;
+            else button = <button className={GamePageCss.buying} onClick={this.grab}>搶購中</button>;
+        } else if(this.state.nowTime - this.state.endTime > 0){
+            button = <button className={GamePageCss.ending} disabled>已結束</button>;
+        } else {
+            if(this.state.startedTime - this.state.nowTime > 90000){
+                button = <button className={GamePageCss.waiting} disabled>等待中</button>;
+            } else {
+                button = <button className={GamePageCss.waiting} disabled>等待{parseInt((this.state.startedTime - this.state.nowTime) / 1000)}</button>
+            }
+        }
+
+        return(
+            <div className={GamePageCss.row}>
+                <div className={GamePageCss.box}>
+                    <img src={require("../../img" + this.props.value.petImgFile)} alt="" />
+                    <div className={GamePageCss.k_shei_intro}>
+                        <div className={GamePageCss.value}>
+                            <div className={GamePageCss.k_shei_intro_text}>寵物價值:</div>
+                            <div className={GamePageCss.k_shei_intro_content}>{this.props.value.startedPetValue} - {this.props.value.endPetValue}</div>
+                        </div>
+                        <div className={GamePageCss.percentage_and_day}>
+                            <div className={GamePageCss.k_shei_intro_text}>成長資訊:</div>
+                            <div className={GamePageCss.k_shei_intro_content}>{this.props.value.percentage}% / {this.props.value.increasedDay}天</div>
+                        </div>
+                        <div className={GamePageCss.time}>
+                            <div className={GamePageCss.k_shei_intro_text}>抓取時間:</div>
+                            <div className={GamePageCss.k_shei_intro_content}>{this.props.value.startedHour}:00 - {this.props.value.startedHour}:{this.props.value.rangeTime}</div>
+                        </div>
+                    </div>
+                    {button}
+                </div>
+            </div>
+        );
+    }
+
+}
+
+class GamePage extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            isShow: false
+        }
+        this.openModal = this.openModal.bind(this);
+    }
+
+    openModal(modalObj){
+        this.setState(modalObj);
+    }
+
+    render(){
+        return(
+            <div>
+                <div className={GamePageCss.slider_banner}>
+                    <div>
+                        <img src={require("../../img/k_shei_on_grass_1.png")} alt="" />
+                        
+                    </div>
+                    <div>
+                        <img src={require("../../img/k_shei_on_grass_1.png")} alt="" />
+                        
+                    </div>
+                    <div>
+                        <img src={require("../../img/k_shei_on_grass_1.png")} alt="" />
+                        
+                    </div>
+                    <div>
+                        <img src={require("../../img/k_shei_on_grass_1.png")} alt="" />
+                        
+                    </div>
+                    <div>
+                        <img src={require("../../img/k_shei_on_grass_1.png")} alt="" />
+                        
+                    </div>
+                </div>
+                <div className={GamePageCss.main}>
                 
-                <img src={'img/k_shei_6.png'} alt=""/>
-              </div>
-          );
-    
-  }
+                    {
+                        this.state.petInfoList.map((value, index) => {
+                            return <KSheiComponent value={value} key={index} openModal={this.props.openModal}/>
+                        })
+                    }
+
+                </div>
+                <div className={GamePageCss.footer}>
+                    <div className={GamePageCss.content}>
+                        <Link to={UriView.GamePage.Uri} className={GamePageCss.lobby_link}>
+                            <div className={[GamePageCss.footer_btn ,GamePageCss.active].join(' ')}>
+                                <img src={require("../../img/settings.png")} alt="" width="32px" />
+                                <div>大廳</div>
+                            </div>
+                        </Link>
+                        <Link to={UriView.OverviewPage.Uri} className={GamePageCss.lobby_link}>
+                            <div className={GamePageCss.footer_btn}>
+                                <img src={require("../../img/user.png")} alt="" width="32px" />
+                                <div>我的資訊</div>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
 }
 
