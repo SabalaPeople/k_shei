@@ -85,4 +85,4 @@ class RouterApp extends React.Component {
 
 
 
-ReactDOM.render(<HomePage/>, document.body);
+ReactDOM.render(<RouterApp/>, document.body);
