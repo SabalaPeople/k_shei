@@ -18,11 +18,11 @@ var Intro = () => {
         </nav>
     </div>
     <div className={'banner'} id="banner">
-        <img src={'/img/k_shei_on_grass_1.png'} alt=""/>
+        <img src={'img/k_shei_on_grass_1.png'} alt=""/>
     </div>
     <div className={'intro'} id="intro">
         <div className={'intro_1'}>
-            <img src={'/img/k_shei_1.png'} alt=""/>
+            <img src={'img/k_shei_1.png'} alt=""/>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
         </div>
         <div className={'intro_1'}>
