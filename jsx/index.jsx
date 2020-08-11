@@ -19,7 +19,8 @@ class HomePage extends React.Component {
 
     render(){
       return (
-        <div>AVCD <Link to={"/game"}>ASDD</Link>
+        <div>AVCD 
+          {/* <Link to={"/game"}>ASDD</Link> */}
 
         </div>
       );
