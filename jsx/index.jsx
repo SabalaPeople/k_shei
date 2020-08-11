@@ -158,7 +158,7 @@ class GamePage extends React.Component {
 class RouterApp extends React.Component {
     render() {
       return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route path={"/game"} component={GamePage}/>
             <Route exact path={"/"} component={HomePage}/>
