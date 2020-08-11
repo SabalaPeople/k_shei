@@ -1,0 +1,108 @@
+body{
+    width: 100vw;
+    background-color: rgb(138, 224, 177);
+}
+
+.header{
+    display: flex;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.header nav{
+    width: 100%;
+    font-size: 0;
+}
+
+.header nav a{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 0 16px;
+    color: #fff;
+    font-family: 'Microsoft JhengHei';
+}
+
+.banner{
+    margin: 20px 0;
+    text-align: center;
+    
+}
+
+.banner img{
+   width: 80vw;
+   height: 80vh;
+}
+
+.intro{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.intro .intro_1{
+    text-align: center;
+    line-height: 40px;
+    flex: 0 0 33.33%;
+}
+
+.intro .intro_1 img{
+    float: left;
+}
+
+.k_shei_intro{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.k_shei_intro .intro_1{
+    text-align: center;
+    line-height: 40px;
+    flex: 0 0 33.33%;
+}
+
+.k_shei_intro .intro_1 img{
+    float: left;
+}
+
+.login{
+    text-align: center;
+}
+
+.login .login_box{
+    display: flex;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(241, 65, 168, 0.829);
+}
+
+.login .login_box .row{
+    margin: 10px 0;
+}
+
+.login .login_box .row input,button{
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+}
+
+.login .login_box .row button{
+    background-color: rgb(75, 202, 211);
+    border-color: rgb(20, 133, 161);
+}
+
+.footer{
+    margin: 10px 0 0;
+}
+
+.footer img{
+    width: 100%;
+}
