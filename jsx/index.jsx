@@ -115,8 +115,9 @@ class HomePage extends React.Component {
       if(!this.state.isRedirect){
             return(
                 <div>
-                  <Intro/>
-                  <Login onLoginSuccess={this.setIsRedirect}/>
+                  {/* <Intro/>
+                  <Login onLoginSuccess={this.setIsRedirect}/> */}
+                  AAA
                 </div>
             );
       } else {
