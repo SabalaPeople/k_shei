@@ -28,11 +28,11 @@ class HomePage extends React.Component {
 class RouterApp extends React.Component {
     render() {
       return (
-        <React.Component.BrowserRouter>
-          <React.Component.Switch>
-            <React.Component.Route exact path={"/"} component={HomePage}/>
-          </React.Component.Switch>
-        </React.Component.BrowserRouter>
+        <ReactRouter.BrowserRouter>
+          <ReactRouter.Switch>
+            <ReactRouter.Route exact path={"/"} component={HomePage}/>
+          </ReactRouter.Switch>
+        </ReactRouter.BrowserRouter>
       );
     }
   }
