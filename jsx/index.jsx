@@ -1,9 +1,4 @@
-const Router = window.ReactRouterDOM.BrowserRouter;
-const Route =  window.ReactRouterDOM.Route;
-const Link =  window.ReactRouterDOM.Link;
-const Prompt =  window.ReactRouterDOM.Prompt;
-const Switch = window.ReactRouterDOM.Switch;
-const Redirect = window.ReactRouterDOM.Redirect;
+
 
 class HomePage extends React.Component {
 
@@ -32,17 +27,6 @@ class HomePage extends React.Component {
 
 
 
-class RouterApp extends React.Component {
-    render() {
-      return (
-        <Router>
-          <Switch>
-            <Route exact path={"/A"} render={<HomePage/>}/>
-          </Switch>
-        </Router>
-      );
-    }
-  }
 
 
 
@@ -64,4 +48,5 @@ class RouterApp extends React.Component {
 
 
 
-ReactDOM.render(<RouterApp/>, document.body);
+
+ReactDOM.render(<HomePage/>, document.body);
