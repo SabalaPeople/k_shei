@@ -34,11 +34,11 @@ class HomePage extends React.Component {
 class RouterApp extends React.Component {
     render() {
       return (
-        <Route.BrowserRouter>
+        <BrowserRouter>
           <Route.Switch>
             <Route.Route exact path={"/"} component={HomePage}/>
           </Route.Switch>
-        </Route.BrowserRouter>
+        </BrowserRouter>
       );
     }
   }
