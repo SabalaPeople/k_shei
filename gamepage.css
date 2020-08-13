@@ -1,11 +1,11 @@
 
 
-.slider_banner{
+.slider_bannerG{
     position: relative;
     text-align: center;
 }
 
-.slider_banner div {
+.slider_bannerG div {
     position: absolute;
     width: 100%;
     top: 0;
@@ -16,7 +16,7 @@
     animation: round 25s linear infinite;
 }
 
-.slider_banner div img{
+.slider_bannerG div img{
     width: 50vw;
 }
 
@@ -55,32 +55,32 @@
     }
 }
 
-.slider_banner div:nth-child(5) {
+.slider_bannerG div:nth-child(5) {
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
 }
 
-.slider_banner div:nth-child(4) {
+.slider_bannerG div:nth-child(4) {
     -webkit-animation-delay: 5s;
             animation-delay: 5s;
 }
 
-.slider_banner div:nth-child(3) {
+.slider_bannerG div:nth-child(3) {
     -webkit-animation-delay: 10s;
             animation-delay: 10s;
 }
 
-.slider_banner div:nth-child(2) {
+.slider_bannerG div:nth-child(2) {
     -webkit-animation-delay: 15s;
             animation-delay: 15s;
 }
 
-.slider_banner div:nth-child(1) {
+.slider_bannerG div:nth-child(1) {
     -webkit-animation-delay: 20s;
             animation-delay: 20s;
 }
 
-.main{
+.mainG{
     display: flex;
     padding-top: 29%;
     flex-wrap: wrap;
@@ -89,11 +89,11 @@
     justify-content: center;
 }
 
-.main .row{
+.mainG .rowG{
     flex: 0 0 50%;
 }
 
-.main .row .box{
+.mainG .rowG .boxG{
     min-width: 202px;
     height: auto;
     text-align: center;
@@ -104,50 +104,50 @@
     background-color: cornsilk;
 }
 
-.main .row .box img{
+.mainG .rowG .boxG img{
     height: 170px;
 }
 
-.main .box button{
+.mainG .boxG button{
     width: 100px;
     height: 40px;
     border-radius: 5px;
 }
 
-.main .box button.waiting{
+.mainG .boxG button.waitingG{
     background-color: rgb(100, 149, 237);
 }
 
-.main .box button.ending{
+.mainG .boxG button.endingG{
     background-color: rgb(218, 83, 83);
 }
 
-.main .box button.buying{
+.mainG .boxG button.buyingG{
     background-color: rgb(64, 209, 228);
 }
 
-.k_shei_intro{
+.k_shei_introG{
     margin: 5px auto;
 }
 
-.k_shei_intro .value, .percentage_and_day, .time{
+.k_shei_introG .valueG, .percentage_and_dayG, .timeG{
     display: flex;
 }
 
-.k_shei_intro_text, .k_shei_intro_content{
+.k_shei_intro_textG, .k_shei_intro_contentG{
     display: inline-block;
 }
 
-.k_shei_intro_text{
+.k_shei_intro_textG{
     width: 40%;
     text-align: right;
 }
 
-.k_shei_intro_content{
+.k_shei_intro_contentG{
     width: 60%;
 }
 
-.footer{
+.footerG{
     display: flex;
     flex-wrap: wrap;
     /* width: 50vw; */
@@ -155,7 +155,7 @@
     justify-content: center;
 }
 
-.footer .content{
+.footerG .contentG{
     display: flex;
     width: 100%;
     min-height: 70px;
@@ -163,12 +163,12 @@
     justify-content: center;
 }
 
-.footer .content .lobby_link{
+.footerG .contentG .lobby_linkG{
     width: 50%;
     text-align: center;
 }
 
-.footer .content .lobby_link .footer_btn{
+.footerG .contentG .lobby_linkG .footer_btnG{
     display: inline-block;
     width: 100%;
     border-style: groove;
@@ -179,11 +179,11 @@
     -webkit-user-select: none;
 }
 
-.footer .content .lobby_link .footer_btn.active{
+.footerG .contentG .lobby_linkG .footer_btnG.active{
     background-color: rgb(61, 72, 230);
 }
 
-.footer .content .lobby_link .footer_btn:active{
+.footerG .contentG .lobby_linkG .footer_btnG:active{
     background-color: rgb(61, 72, 230);
     cursor: pointer;
 }

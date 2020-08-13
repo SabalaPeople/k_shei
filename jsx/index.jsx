@@ -160,21 +160,21 @@ class KSheiComponent extends React.Component{
         // }
 
         return(
-            <div className={'row'}>
-                <div className={'box'}>
+            <div className={'rowG'}>
+                <div className={'boxG'}>
                     <img src={'img' + this.props.prop.ksheiImg} alt="" />
-                    <div className={'k_shei_intro'}>
-                        <div className={'value'}>
-                            <div className={'k_shei_intro_text'}>寵物價值:</div>
-                            <div className={'k_shei_intro_content'}>{this.props.prop.ksheiValue}</div>
+                    <div className={'k_shei_introG'}>
+                        <div className={'valueG'}>
+                            <div className={'k_shei_intro_textG'}>寵物價值:</div>
+                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiValue}</div>
                         </div>
-                        <div className={'percentage_and_day'}>
-                            <div className={'k_shei_intro_text'}>成長資訊:</div>
-                            <div className={'k_shei_intro_content'}>{this.props.prop.ksheiGrowing}天</div>
+                        <div className={'percentage_and_dayG'}>
+                            <div className={'k_shei_intro_textG'}>成長資訊:</div>
+                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiGrowing}天</div>
                         </div>
-                        <div className={'time'}>
-                            <div className={'k_shei_intro_text'}>抓取時間:</div>
-                            <div className={'k_shei_intro_content'}>{this.props.prop.ksheiGrab}</div>
+                        <div className={'timeG'}>
+                            <div className={'k_shei_intro_textG'}>抓取時間:</div>
+                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiGrab}</div>
                         </div>
                     </div>
                     {button}
@@ -216,7 +216,7 @@ class GamePage extends React.Component{
     render(){
         return(
             <div>
-                <div className={'slider_banner'}>
+                <div className={'slider_bannerG'}>
                     <div>
                         <img src={'img/k_shei_on_grass_1.png'} alt="" />
                         
@@ -238,7 +238,7 @@ class GamePage extends React.Component{
                         
                     </div>
                 </div>
-                <div className={'main'}>
+                <div className={'mainG'}>
                 
                     {
                         this.renderKShei()
