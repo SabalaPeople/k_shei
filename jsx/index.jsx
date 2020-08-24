@@ -134,21 +134,16 @@ class KSheiComponent extends React.Component{
 
     constructor(props){
         super(props);
-        this.state = {
-           
-        }
-        
-       
     }
 
     render(){
         let time = 18;
         let button;
         /** button = <button className={'buying} onClick={this.grab}>搶購中</button>; */
-        if(this.props.prop.time == time){
-            button = <button className={'buyingG'} onClick={this.grab}>搶購中</button>;
+        if(this.props.prop.ksheiAry.time == time){
+            button = <button className={'buyingG'} onClick={this.props.prop.callback}>搶購中</button>;
         } else {
-            if(this.props.prop.time < time){
+            if(this.props.prop.ksheiAry.time < time){
                 button = <button className={'endingG'} disabled>已結束</button>;
             } else {
                 button = <button className={'waitingG'} disabled>等待</button>
@@ -158,22 +153,42 @@ class KSheiComponent extends React.Component{
         return(
             <div className={'rowG'}>
                 <div className={'boxG'}>
-                    <img src={'img' + this.props.prop.ksheiImg} alt="" />
+                    <img src={'img' + this.props.prop.ksheiAry.ksheiImg} alt="" />
                     <div className={'k_shei_introG'}>
                         <div className={'valueG'}>
                             <div className={'k_shei_intro_textG'}>寵物價值:</div>
-                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiValue}</div>
+                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiAry.ksheiValue}</div>
                         </div>
                         <div className={'percentage_and_dayG'}>
                             <div className={'k_shei_intro_textG'}>成長資訊:</div>
-                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiGrowing}天</div>
+                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiAry.ksheiGrowing}天</div>
                         </div>
                         <div className={'timeG'}>
                             <div className={'k_shei_intro_textG'}>抓取時間:</div>
-                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiGrab}</div>
+                            <div className={'k_shei_intro_contentG'}>{this.props.prop.ksheiAry.ksheiGrab}</div>
                         </div>
                     </div>
                     {button}
+                </div>
+            </div>
+        );
+    }
+
+}
+
+class KSModal extends React.Component{
+
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        let modalClass = (this.props.show) ? ["modalG", "open"] : ["modalG"];
+        return(
+            <div className={modalClass.join(" ")}>
+                <div className={"modal-contentG"}>
+                    <span className={"closeG"} onClick={this.props.callback}>&times;</span>
+                    <p>狗鳥抓取中...</p>
                 </div>
             </div>
         );
@@ -186,11 +201,14 @@ class GamePage extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            
+            show: false
         }
-       
+        this.showModal = this.showModal.bind(this);
     }
 
+    showModal(){
+        this.setState({show: !this.state.show});
+    }
 
     renderKShei(){
         let ksheiData = [
@@ -204,7 +222,7 @@ class GamePage extends React.Component{
 
         let ary = [];
         for(let i = 0 ; i < 6 ; i++){
-            ary[i] = <KSheiComponent prop={ksheiData[i]}/>;
+            ary[i] = <KSheiComponent prop={{ksheiAry:ksheiData[i], callback: this.showModal}}/>;
         }
         return ary;
     }
@@ -212,6 +230,7 @@ class GamePage extends React.Component{
     render(){
         return(
             <div>
+                <KSModal show={this.state.show} callback={this.showModal}/>
                 <div className={'slider_bannerG'}>
                     <div>
                         <img src={'img/k_shei_on_grass_1.png'} alt="" />
