@@ -10,7 +10,9 @@ var Intro = () => {
   return (
     <div>
     <div className={'header'}>
-        
+        <nav>
+           登入在最下方(帳號密碼隨意輸入)          
+        </nav>
     </div>
     <div className={'banner'}>
         <img src={'img/k_shei_on_grass_1.png'} alt=""/>
