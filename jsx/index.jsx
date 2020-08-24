@@ -10,17 +10,12 @@ var Intro = () => {
   return (
     <div>
     <div className={'header'}>
-        <nav>
-            <a href="#banner">首頁</a> 
-            <a href="#intro">遊戲介紹</a>      
-            <a href="#k_shei_intro">狗鳥介紹</a>      
-            <a href="#login">登入</a>                 
-        </nav>
+        
     </div>
-    <div className={'banner'} id="banner">
+    <div className={'banner'}>
         <img src={'img/k_shei_on_grass_1.png'} alt=""/>
     </div>
-    <div className={'intro'} id="intro">
+    <div className={'intro'}>
 
         <div className={'intro_1'}>
             <img src={'img/k_shei_1.png'} alt=""/>
@@ -79,7 +74,7 @@ class Login extends React.Component{
 
   render(){
       return(
-          <div className={'login'} id="login">
+          <div className={'login'}>
               <div className={'login_box'}>
                   <div>
                       <form onSubmit={this.login}>
