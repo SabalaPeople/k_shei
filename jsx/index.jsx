@@ -21,43 +21,41 @@ var Intro = () => {
         <img src={'img/k_shei_on_grass_1.png'} alt=""/>
     </div>
     <div className={'intro'} id="intro">
+
         <div className={'intro_1'}>
             <img src={'img/k_shei_1.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
         </div>
         <div className={'intro_1'}>
             <img src={'img/k_shei_1.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
         </div>
-        <div className={'intro_1'}>
-            <img src={'img/k_shei_1.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
-        </div>
+        
     </div>
     <div className={'k_shei_intro'} id="k_shei_intro">
         <div className={'intro_1'}>
             <img src={'img/k_shei_1.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!
         </div>
         <div className={'intro_1'}>
             <img src={'img/k_shei_2.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!
         </div>
         <div className={'intro_1'}>
             <img src={'img/k_shei_3.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!
         </div>
         <div className={'intro_1'}>
             <img src={'img/k_shei_4.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!
         </div>
         <div className={'intro_1'}>
             <img src={'img/k_shei_5.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!
         </div>
         <div className={'intro_1'}>
             <img src={'img/k_shei_6.png'} alt=""/>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, natus voluptas repellat tenetur harum odit fugit commodi et pariatur quas voluptates eveniet, id quis ipsum dolorem officiis maiores, consequatur non?
+            可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!可以抓狗鳥。吼甚!!
         </div>
     </div>
   </div>
@@ -85,8 +83,8 @@ class Login extends React.Component{
               <div className={'login_box'}>
                   <div>
                       <form onSubmit={this.login}>
-                          <div className={'row'}><input type="text" onChange={e => this.setState({phone: e.target.value})} required/></div>
-                          <div className={'row'}><input type="password" onChange={e => this.setState({pwd: e.target.value})} required/></div>
+                          <div className={'row'}><input type="text" onChange={e => this.setState({phone: e.target.value})} placeholder={"帳號"} required/></div>
+                          <div className={'row'}><input type="password" onChange={e => this.setState({pwd: e.target.value})} placeholder={"密碼"} required/></div>
                           <div className={'row'}><button type="submit">登入</button></div>
                       </form>
                   </div>
@@ -144,20 +142,18 @@ class KSheiComponent extends React.Component{
     }
 
     render(){
+        let time = 18;
         let button;
         /** button = <button className={'buying} onClick={this.grab}>搶購中</button>; */
-        // if(this.state.nowTime - this.state.startedTime > 0 && this.state.nowTime - this.state.endTime < 0){
-        //     if(this.state.isGrabbed) button = <button className={'ending'} disabled>已結束</button>;
-        //     else button = <button className={'buying'} onClick={this.grab}>搶購中</button>;
-        // } else if(this.state.nowTime - this.state.endTime > 0){
-        //     button = <button className={'ending'} disabled>已結束</button>;
-        // } else {
-        //     if(this.state.startedTime - this.state.nowTime > 90000){
-        //         button = <button className={'waiting'} disabled>等待中</button>;
-        //     } else {
-        //         button = <button className={'waiting'} disabled>等待{parseInt((this.state.startedTime - this.state.nowTime) / 1000)}</button>
-        //     }
-        // }
+        if(this.props.prop.time == time){
+            button = <button className={'buyingG'} onClick={this.grab}>搶購中</button>;
+        } else {
+            if(this.props.prop.time < time){
+                button = <button className={'endingG'} disabled>已結束</button>;
+            } else {
+                button = <button className={'waitingG'} disabled>等待</button>
+            } 
+        }
 
         return(
             <div className={'rowG'}>
@@ -198,12 +194,12 @@ class GamePage extends React.Component{
 
     renderKShei(){
         let ksheiData = [
-            {ksheiImg: '/k_shei_1.png', ksheiValue: 300, ksheiGrowing: 5, ksheiGrab: '12:00 - 12:10'},
-            {ksheiImg: '/k_shei_2.png', ksheiValue: 500, ksheiGrowing: 7, ksheiGrab: '14:00 - 14:10'},
-            {ksheiImg: '/k_shei_3.png', ksheiValue: 700, ksheiGrowing: 9, ksheiGrab: '16:00 - 16:10'},
-            {ksheiImg: '/k_shei_4.png', ksheiValue: 1200, ksheiGrowing: 12, ksheiGrab: '18:00 - 18:10'},
-            {ksheiImg: '/k_shei_5.png', ksheiValue: 1500, ksheiGrowing: 15, ksheiGrab: '20:00 - 20:10'},
-            {ksheiImg: '/k_shei_6.png', ksheiValue: 3000, ksheiGrowing: 22, ksheiGrab: '22:00 - 22:10'}
+            {ksheiImg: '/k_shei_1.png', ksheiValue: 300, ksheiGrowing: 5, ksheiGrab: '12:00 - 12:10', time: 12},
+            {ksheiImg: '/k_shei_2.png', ksheiValue: 500, ksheiGrowing: 7, ksheiGrab: '14:00 - 14:10', time: 14},
+            {ksheiImg: '/k_shei_3.png', ksheiValue: 700, ksheiGrowing: 9, ksheiGrab: '16:00 - 16:10', time: 16},
+            {ksheiImg: '/k_shei_4.png', ksheiValue: 1200, ksheiGrowing: 12, ksheiGrab: '18:00 - 18:10', time: 18},
+            {ksheiImg: '/k_shei_5.png', ksheiValue: 1500, ksheiGrowing: 15, ksheiGrab: '20:00 - 20:10', time: 20},
+            {ksheiImg: '/k_shei_6.png', ksheiValue: 3000, ksheiGrowing: 22, ksheiGrab: '22:00 - 22:10', time: 22}
         ];
 
         let ary = [];
